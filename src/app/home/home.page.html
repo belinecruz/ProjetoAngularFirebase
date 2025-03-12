@@ -1,17 +1,137 @@
 <ion-content [fullscreen]="true">
     
-    <ion-row>
-        <ion-col size="12" size-lg="6">
-            <ion-item>
-                <ion-input label="Nome do Pokemon" placeholder="Nome do Pokemon" labelPlacement="floating" [(ngModel)]="this.pokemon.nome" ></ion-input>
-            </ion-item>
-            <ion-item>
-                <ion-input label="Poder do Pokemon" placeholder="Poder do Pokemon" labelPlacement="floating" [(ngModel)]="this.pokemon.poder"></ion-input>
-            </ion-item>
-            <ion-item lines="none">
-                <ion-button (click)="enviar()" color="secondary" size="medium">Enviar</ion-button>
-            </ion-item>
+    <ion-row class="ion-justify-content-center">
+        <ion-col size="12" size-xl="6">
+
+            <ion-row>
+                <ion-col size="4" size-xl="3">
+                    <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fgq.globo.com%2Festilo%2Fbeleza%2Fnoticia%2F2022%2F09%2Fcomo-cuidar-barba-cabelos-brancos.ghtml&psig=AOvVaw3cdV7sNYPJGRSDa20sCnTw&ust=1741885168784000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNC-ws2ChYwDFQAAAAAdAAAAABAE" style="max-width: 300px">
+                    <ion-item>
+                        <ion-label>
+                            <h1>Carlos antonio</h1>
+                        </ion-label>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label>Programação</ion-label>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label>Portugues</ion-label>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label>Localidade</ion-label>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label>Desde janeiro de 2020</ion-label>
+                    </ion-item>
+                </ion-col>
+                <ion-col size="8" size-xl="9">
+                    
+                </ion-col>
+               </ion-row>
+
+               <ion-row>
+                <ion-col size="12">
+                    <ion-item lines="none">
+                        <ion-label>
+                            <h2>Biografia</h2>
+                        </ion-label>
+                    </ion-item>
+                </ion-col>
+               </ion-row>
+
+               <ion-row>
+                <ion-col size="12">
+                    <ion-item>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur velit, ipsum in repellat magnam impedit nisi. Cumque, sequi! Unde illo nesciunt doloremque eaque dignissimos nihil dolore fugiat explicabo labore. Excepturi?
+                        </p>
+                    </ion-item>
+                </ion-col>
+               </ion-row>
+
+               <ion-row>
+                    <ion-col size="4">
+                        <ion-item lines="none">
+                            <ion-label>
+                                <h3>45.6k</h3>
+                            </ion-label>
+                        </ion-item>
+                        <ion-item lines="none">
+                            <ion-label>
+                                <h5>Curtidas</h5>
+                            </ion-label>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col size="4">
+                        <ion-item lines="none">
+                            <ion-label>
+                                <h3>45.6k</h3>
+                            </ion-label>
+                        </ion-item>
+                        <ion-item lines="none">
+                            <ion-label>
+                                <h5>Seguindo</h5>
+                            </ion-label>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col size="4">
+                        <ion-item lines="none">
+                            <ion-label>
+                                <h3>45.6k</h3>
+                            </ion-label>
+                        </ion-item>
+                        <ion-item lines="none">
+                            <ion-label>
+                                <h5>Amigos</h5>
+                            </ion-label>
+                        </ion-item>
+                    </ion-col>
+
+               </ion-row>
+    
+
+            <ion-row>
+                <ion-col size="12" class="text-conter">
+                    <ion-item-divider></ion-item-divider>
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                <ion-col size="12">
+                    <ion-label>
+                        <h2>minhas postagem</h2>
+                    </ion-label>
+                </ion-col>
+            </ion-row>
+
+            <ng-container  *ngFor="let postagem of this.perfil.postagem"> 
+
+                <ion-row>
+                    <ion-col size="4" size-xl="3">
+                        <img src="{{postagem.foto}}">
+                    </ion-col>
+                    <ion-col size="8" size-xl="9">
+                        <ion-item lines="none">
+                            <h2>{{ postagem.nome }} {{ postagem.nome_usuario }}</h2>
+                        </ion-item>
+                        <p>{{ postagem.texto }}</p>
+                        <p>{{ postegem.data }}</p>
+                    </ion-col>
+                </ion-row>
+
+            </ng-container>
+        
+            
+
+
+
         </ion-col>
     </ion-row>
+
+   
+
+
+
+
+   
 
 </ion-content>
